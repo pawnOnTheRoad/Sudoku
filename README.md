@@ -1,2 +1,4 @@
 # Sudoku
-Juego de Sudoku
+Ejercicio para aprender programación ¡Hola! Estoy estudiando hace 5 meses programación y realicé este Sudoku para poner en práctica lo aprendido. El objetivo está cumplido, el programa logra armar Sudokus y el usuario puede jugar. Algunas consideraciones: 
+1) el diseño html es sencillo, la idea era poner en práctica lo aprendido en JS 
+2) Hay un detalle con el botón verificar. Este botón verifica si los números insertados por el usuario coinciden con los números del Sudoku generado por el programa. En este sentido tener en cuenta que un Sudoku podría llegar a tener varias formas de resolverlos. Sin embargo, de acuerdo a lo poco que leí de teoría de los Sudokus para que un Sudoku tenga una única resolución tiene que mostrar por lo menos 17 números. En este programa la opción dificil muestra 35 números con lo cual creo que existen pocas chances de que el Sudoku en cuestión tenga mas de una resolución. De todas formas me parece importante marcarlo porque esto es simplemente una intuición.
