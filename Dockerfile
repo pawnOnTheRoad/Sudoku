@@ -8,7 +8,7 @@ RUN mkdir -p /usr/share/nginx/app
 COPY . /usr/share/nginx/app
 
 # Copia el archivo de configuración personalizado
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY default.conf /etc/nginx/nginx.conf
 
 # Establece el directorio de trabajo
 WORKDIR /usr/share/nginx/app
