@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="./Sudoku.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header></header>
+<div class="content">
+
+
+    <div class="left">
+    <p2>Elige un nivel para comenzar</p2>
+    <button type="button" id="facil" onclick= "mostrarNumeros(65)">Fácil</button>
+    <button type="button" id="intermedio" onclick="mostrarNumeros(50)">Intermedio</button>
+    <button type="button" id="dificil" onclick="mostrarNumeros(35)">Díficil</button>
+    <button title="Solo oprimir al finalizar" id="verificar" class= "button2" type="button" onclick="verificacion(); anulaInput()">Verificar</button>
+    <button type="button" id="jugar otra vez" class= "button2" onclick="window.location.reload()">Jugar Otra vez</button>
+    </div>
+
+    <div class="Sudoku">
+        <h2 style="text-align:center; font-size:30px;">Sudoku</h2>
+    <table style="margin: 0 auto;">
+    <tr>
+        <td id="A0" class="horizontal-gruesa vertical-gruesa-izquierda"><input id="inputA0" autocomplete="off" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="B0" class="horizontal-gruesa"><input id="inputB0" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="C0" class="vertical-gruesa horizontal-gruesa"><input  id="inputC0" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="D0" class="horizontal-gruesa"><input id="inputD0" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="E0" class="horizontal-gruesa"><input id="inputE0" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="F0" class="vertical-gruesa horizontal-gruesa" ><input id="inputF0" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="G0" class="horizontal-gruesa"><input id="inputG0" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="H0" class="horizontal-gruesa"><input id="inputH0" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="I0" class="vertical-gruesa horizontal-gruesa" ><input id="inputI0" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+    </tr>
+    <tr>
+        <td id="A1" class="vertical-gruesa-izquierda"><input id="inputA1" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="B1"><input id="inputB1" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="C1" class="vertical-gruesa" ><input id="inputC1" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="D1"><input id="inputD1" onkeydown="movFocus(event)" oninput="inputUsuario(event)" ></td>
+        <td id="E1"><input id="inputE1" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="F1" class="vertical-gruesa" ><input id="inputF1" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="G1"><input id="inputG1" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="H1"><input id="inputH1" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="I1" class="vertical-gruesa" ><input id="inputI1" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+    </tr>
+    <tr>
+        <td id="A2" class="vertical-gruesa-izquierda"><input id="inputA2" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="B2"><input id="inputB2" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="C2" class="vertical-gruesa"><input id="inputC2" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="D2"><input id="inputD2" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="E2"><input id="inputE2" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="F2" class="vertical-gruesa" ><input id="inputF2" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="G2"><input id="inputG2" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="H2"><input id="inputH2" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="I2" class="vertical-gruesa" ><input id="inputI2" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+    </tr>
+    <tr>
+        <td id="A3" class="horizontal-gruesa vertical-gruesa-izquierda"><input id="inputA3" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="B3" class="horizontal-gruesa"><input id="inputB3" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="C3" class="vertical-gruesa horizontal-gruesa"><input id="inputC3" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="D3" class="horizontal-gruesa"><input id="inputD3" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="E3" class="horizontal-gruesa"><input id="inputE3" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="F3" class="vertical-gruesa horizontal-gruesa" ><input id="inputF3" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="G3" class="horizontal-gruesa"><input id="inputG3" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="H3" class="horizontal-gruesa"><input id="inputH3" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="I3" class="vertical-gruesa horizontal-gruesa" ><input id="inputI3" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+    </tr>
+    <tr>
+        <td id="A4" class="vertical-gruesa-izquierda"><input id="inputA4" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="B4"><input id="inputB4" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="C4" class="vertical-gruesa"><input id="inputC4" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="D4"><input id="inputD4" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="E4"><input id="inputE4" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="F4" class="vertical-gruesa" ><input id="inputF4" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="G4"><input id="inputG4" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="H4"><input id="inputH4" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td> 
+        <td id="I4" class="vertical-gruesa" ><input id="inputI4" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+    </tr>
+    <tr>
+        <td id="A5" class="vertical-gruesa-izquierda"><input id="inputA5" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="B5"><input id="inputB5" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="C5" class="vertical-gruesa"><input id="inputC5" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="D5"><input id="inputD5" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="E5"><input id="inputE5" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="F5" class="vertical-gruesa" ><input id="inputF5" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="G5"><input id="inputG5" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="H5"><input id="inputH5" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="I5" class="vertical-gruesa" ><input id="inputI5" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+    </tr>
+    <tr>
+        <td id="A6" class="horizontal-gruesa vertical-gruesa-izquierda"><input id="inputA6" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="B6" class="horizontal-gruesa"><input input id="inputB6" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="C6" class="vertical-gruesa horizontal-gruesa"><input input id="inputC6" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="D6" class="horizontal-gruesa"><input input id="inputD6" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="E6" class="horizontal-gruesa"><input input id="inputE6" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="F6" class="vertical-gruesa horizontal-gruesa" ><input input id="inputF6" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="G6" class="horizontal-gruesa"><input input id="inputG6" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="H6" class="horizontal-gruesa"><input input id="inputH6" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="I6" class="vertical-gruesa horizontal-gruesa" ><input input id="inputI6" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+    </tr>
+    <tr>
+        <td id="A7" class="vertical-gruesa-izquierda"><input input id="inputA7" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="B7"><input input id="inputB7" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="C7" class="vertical-gruesa"><input input id="inputC7" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="D7"><input input id="inputD7" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="E7"><input input id="inputE7" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="F7" class="vertical-gruesa" ><input input id="inputF7" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="G7"><input input id="inputG7" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="H7"><input input id="inputH7" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="I7" class="vertical-gruesa" ><input input id="inputI7" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+    </tr>
+    <tr>
+        <td id="A8" class="vertical-gruesa-izquierda horizontal-gruesa-abajo"><input input id="inputA8" onkeydown="movFocus(event)" oninput="inputUsuario(event)" ></td>
+        <td id="B8" class="horizontal-gruesa-abajo"><input input id="inputB8" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="C8" class="vertical-gruesa horizontal-gruesa-abajo"><input input id="inputC8" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="D8" class="horizontal-gruesa-abajo"><input input id="inputD8" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="E8" class="horizontal-gruesa-abajo"><input input id="inputE8" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="F8" class="vertical-gruesa horizontal-gruesa-abajo"><input input id="inputF8" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="G8" class="horizontal-gruesa-abajo"><input input id="inputG8" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="H8" class="horizontal-gruesa-abajo"><input input id="inputH8" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+        <td id="I8" class="vertical-gruesa horizontal-gruesa-abajo"><input input id="inputI8" onkeydown="movFocus(event)" oninput="inputUsuario(event)"></td>
+    </tr>
+    </table>
+        </div>
+    <div class="texto">
+    <p1>Sudoku se juega en una cuadrícula de 9 x 9 espacios. Cada fila, columna y cuadrado (9 espacios cada uno) debe completarse con los números del 1 al 9, sin repetir ningún número dentro de la fila, columna o cuadrado.</p1>
+    </div>
+</div>
+<div id="inferior"><p1></p1></div>
+<script src="./SudokuFinal2.js"></script>    
+</body>
+
+
+
+</html>
