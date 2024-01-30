@@ -2,14 +2,14 @@
 FROM nginx:alpine
 
 # Crea un directorio para almacenar los archivos de la aplicación
-RUN mkdir -p /usr/share/nginx/app
+RUN mkdir -p /usr/share/nginx/html
 
 # Copia los archivos de tu aplicación al directorio de trabajo
-COPY . /usr/share/nginx/app
+COPY . /usr/share/nginx/html
 
 # Copia el archivo de configuración personalizado
 COPY default.conf /etc/nginx/nginx.conf
 
 # Establece el directorio de trabajo
-WORKDIR /usr/share/nginx/app
+WORKDIR /usr/share/nginx/html
 
